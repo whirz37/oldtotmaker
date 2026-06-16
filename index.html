@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Style Totem Maker 😛</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #313244;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 450px;
+            width: 100%;
+        }
+        h1 {
+            color: #f5c2e7;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+        p {
+            color: #a6adc8;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 12px;
+            margin: 20px 0;
+            border: 2px solid #45475a;
+            border-radius: 6px;
+            background-color: #1e1e2e;
+            color: #cdd6f4;
+            font-size: 16px;
+            outline: none;
+            text-align: center;
+        }
+        input[type="text"]:focus {
+            border-color: #f5c2e7;
+        }
+        button {
+            background-color: #a6e3a1;
+            color: #11111b;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        button:hover {
+            background-color: #94e2d5;
+            transform: scale(1.05);
+        }
+        .instructions {
+            margin-top: 25px;
+            background-color: #181825;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+        }
+        .instructions h3 {
+            margin-top: 0;
+            color: #f9e2af;
+            font-size: 16px;
+        }
+        .instructions ol {
+            margin: 0;
+            padding-left: 20px;
+            color: #bac2de;
+            font-size: 13px;
+        }
+        .instructions li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Old Style Totem Maker 😛</h1>
+        <p>Type your Minecraft username to instantly generate and download your custom old-style totem texture pack!</p>
+        
+        <input type="text" id="username" placeholder="Minecraft Username">
+        <br>
+        <button onclick="totemOlustur()">Download Texture Pack</button>
+
+        <div class="instructions">
+            <h3>How to Use?</h3>
+            <ol>
+                <li>Type your username and click <b>"Download Texture Pack"</b>.</li>
+                <li>Copy the downloaded <b>.zip</b> file without extracting it.</li>
+                <li>Open Minecraft, go to <b>Options > Resource Packs > Open Pack Folder</b>.</li>
+                <li>Paste the file there, activate it in-game, and enjoy your classic custom totem!</li>
+            </ol>
+        </div>
+    </div>
+
+    <canvas id="totemCanvas" width="16" height="16" style="display:none;"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
